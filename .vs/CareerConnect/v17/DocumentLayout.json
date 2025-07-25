@@ -3,12 +3,92 @@
   "WorkspaceRootPath": "C:\\Users\\risha\\source\\repos\\CareerConnect\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\dtos\\resumedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:dtos\\resumedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\controllers\\applicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:controllers\\applicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\services\\applicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:services\\applicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\interfaces\\iapplicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:interfaces\\iapplicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\dtos\\applicationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:dtos\\applicationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\controllers\\jobseekerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:controllers\\jobseekerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\services\\jobseekerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:services\\jobseekerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\interfaces\\ijobseekerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:interfaces\\ijobseekerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\services\\employerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:services\\employerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\dtos\\jobseekerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:dtos\\jobseekerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\controllers\\jobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:controllers\\jobscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\services\\jobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:services\\jobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\interfaces\\ijobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:interfaces\\ijobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\dtos\\jobdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:dtos\\jobdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\models\\jobseeker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:models\\jobseeker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\interfaces\\iemployerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:interfaces\\iemployerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\dtos\\employerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:dtos\\employerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,24 +99,12 @@
       "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\models\\jobseeker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:models\\jobseeker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -50,7 +118,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -67,30 +135,292 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCwAAAAAAAAAAAAAAA==",
+              "Title": "ApplicationController.cs",
+              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Controllers\\ApplicationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ApplicationController.cs",
+              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Controllers\\ApplicationController.cs",
+              "RelativeToolTip": "Controllers\\ApplicationController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAswEEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T04:36:19.703Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "Services\\AuthService.cs",
-              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Services\\AuthService.cs",
-              "RelativeToolTip": "Services\\AuthService.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCoAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T04:11:18.103Z"
+              "WhenOpened": "2025-07-25T08:58:17.01Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwDcAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T12:27:37.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationService.cs",
+              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Services\\ApplicationService.cs",
+              "RelativeDocumentMoniker": "Services\\ApplicationService.cs",
+              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Services\\ApplicationService.cs",
+              "RelativeToolTip": "Services\\ApplicationService.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAgwGwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T08:51:39.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IApplicationService.cs",
+              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Interfaces\\IApplicationService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IApplicationService.cs",
+              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Interfaces\\IApplicationService.cs",
+              "RelativeToolTip": "Interfaces\\IApplicationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T08:51:08.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "JobSeekersController.cs",
+              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Controllers\\JobSeekersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\JobSeekersController.cs",
+              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Controllers\\JobSeekersController.cs",
+              "RelativeToolTip": "Controllers\\JobSeekersController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwDsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T07:38:32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ResumeDTO.cs",
+              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\ResumeDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\ResumeDTO.cs",
+              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\ResumeDTO.cs",
+              "RelativeToolTip": "DTOs\\ResumeDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T07:35:44.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RegisterDTO.cs",
+              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\RegisterDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\RegisterDTO.cs",
+              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\RegisterDTO.cs",
+              "RelativeToolTip": "DTOs\\RegisterDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T03:59:13.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "JobSeekerService.cs",
+              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Services\\JobSeekerService.cs",
+              "RelativeDocumentMoniker": "Services\\JobSeekerService.cs",
+              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Services\\JobSeekerService.cs",
+              "RelativeToolTip": "Services\\JobSeekerService.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAswGAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T08:37:03.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\LoginDTO.cs",
+              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\LoginDTO.cs",
+              "RelativeToolTip": "DTOs\\LoginDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T04:00:15.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserDTO.cs",
+              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\UserDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\UserDTO.cs",
+              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\UserDTO.cs",
+              "RelativeToolTip": "DTOs\\UserDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T04:03:11.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApplicationDTO.cs",
+              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\ApplicationDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\ApplicationDTO.cs",
+              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\ApplicationDTO.cs",
+              "RelativeToolTip": "DTOs\\ApplicationDTO.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAQwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T07:25:03.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IJobSeekerService.cs",
+              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Interfaces\\IJobSeekerService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IJobSeekerService.cs",
+              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Interfaces\\IJobSeekerService.cs",
+              "RelativeToolTip": "Interfaces\\IJobSeekerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T08:36:29.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "JobsController.cs",
+              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Controllers\\JobsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\JobsController.cs",
+              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Controllers\\JobsController.cs",
+              "RelativeToolTip": "Controllers\\JobsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T07:37:30.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "JobService.cs",
+              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Services\\JobService.cs",
+              "RelativeDocumentMoniker": "Services\\JobService.cs",
+              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Services\\JobService.cs",
+              "RelativeToolTip": "Services\\JobService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T07:46:42.365Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IJobService.cs",
+              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Interfaces\\IJobService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IJobService.cs",
+              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Interfaces\\IJobService.cs",
+              "RelativeToolTip": "Interfaces\\IJobService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T07:45:53.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "JobSeekerDTO.cs",
+              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\JobSeekerDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\JobSeekerDTO.cs",
+              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\JobSeekerDTO.cs",
+              "RelativeToolTip": "DTOs\\JobSeekerDTO.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T07:35:12.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EmployerService.cs",
+              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Services\\EmployerService.cs",
+              "RelativeDocumentMoniker": "Services\\EmployerService.cs",
+              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Services\\EmployerService.cs",
+              "RelativeToolTip": "Services\\EmployerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T07:27:34.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmployeeController.cs",
+              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T07:30:58.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "JobSeeker.cs",
+              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Models\\JobSeeker.cs",
+              "RelativeDocumentMoniker": "Models\\JobSeeker.cs",
+              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Models\\JobSeeker.cs",
+              "RelativeToolTip": "Models\\JobSeeker.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T13:16:52.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "JobDTO.cs",
+              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\JobDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\JobDTO.cs",
+              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\JobDTO.cs",
+              "RelativeToolTip": "DTOs\\JobDTO.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T07:24:29.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IEmployerService.cs",
+              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Interfaces\\IEmployerService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IEmployerService.cs",
+              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Interfaces\\IEmployerService.cs",
+              "RelativeToolTip": "Interfaces\\IEmployerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T07:26:38.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "EmployerDTO.cs",
+              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\EmployerDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\EmployerDTO.cs",
+              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\EmployerDTO.cs",
+              "RelativeToolTip": "DTOs\\EmployerDTO.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T07:23:25.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Interfaces\\IAuthService.cs",
               "RelativeDocumentMoniker": "Interfaces\\IAuthService.cs",
@@ -103,44 +433,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserDTO.cs",
-              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\UserDTO.cs",
-              "RelativeDocumentMoniker": "DTOs\\UserDTO.cs",
-              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\UserDTO.cs",
-              "RelativeToolTip": "DTOs\\UserDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 22,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Services\\AuthService.cs",
+              "RelativeToolTip": "Services\\AuthService.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T04:03:11.85Z",
+              "WhenOpened": "2025-07-25T04:11:18.103Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LoginDTO.cs",
-              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\LoginDTO.cs",
-              "RelativeDocumentMoniker": "DTOs\\LoginDTO.cs",
-              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\LoginDTO.cs",
-              "RelativeToolTip": "DTOs\\LoginDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T04:00:15.438Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RegisterDTO.cs",
-              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\RegisterDTO.cs",
-              "RelativeDocumentMoniker": "DTOs\\RegisterDTO.cs",
-              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\RegisterDTO.cs",
-              "RelativeToolTip": "DTOs\\RegisterDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T03:59:13.845Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 25,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Models\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Models\\AppDbContext.cs",
@@ -152,19 +458,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T12:27:37.889Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 26,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -176,15 +470,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "JobSeeker.cs",
-              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Models\\JobSeeker.cs",
-              "RelativeDocumentMoniker": "Models\\JobSeeker.cs",
-              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Models\\JobSeeker.cs",
-              "RelativeToolTip": "Models\\JobSeeker.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAIwCIAAAAqAAAAAAAAAA==",
+              "DocumentIndex": 23,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T13:16:52.598Z"
+              "WhenOpened": "2025-07-25T04:36:19.703Z",
+              "EditorCaption": ""
             }
           ]
         }

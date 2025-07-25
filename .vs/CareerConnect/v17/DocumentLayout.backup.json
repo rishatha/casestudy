@@ -7,18 +7,6 @@
       "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,8 +15,20 @@
       "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{96D4005A-6753-4B83-804A-24D997B4A0E8}|CareerConnect.csproj|c:\\users\\risha\\source\\repos\\careerconnect\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,7 +66,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
@@ -79,20 +79,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "Services\\AuthService.cs",
               "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Services\\AuthService.cs",
               "RelativeToolTip": "Services\\AuthService.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCoAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-25T04:11:18.103Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Interfaces\\IAuthService.cs",
               "RelativeDocumentMoniker": "Interfaces\\IAuthService.cs",
@@ -111,33 +111,33 @@
               "RelativeDocumentMoniker": "DTOs\\UserDTO.cs",
               "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\UserDTO.cs",
               "RelativeToolTip": "DTOs\\UserDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-25T04:03:11.85Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "LoginDTO.cs",
               "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\LoginDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\LoginDTO.cs",
               "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\LoginDTO.cs",
               "RelativeToolTip": "DTOs\\LoginDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-25T04:00:15.438Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "RegisterDTO.cs",
               "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\RegisterDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\RegisterDTO.cs",
               "ToolTip": "C:\\Users\\risha\\source\\repos\\CareerConnect\\DTOs\\RegisterDTO.cs",
               "RelativeToolTip": "DTOs\\RegisterDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-25T03:59:13.845Z",
               "EditorCaption": ""
@@ -152,12 +152,11 @@
               "RelativeToolTip": "Models\\AppDbContext.cs",
               "ViewState": "AgIAADsAAAAAAAAAAAAwwEgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T06:16:02.161Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-24T06:16:02.161Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\risha\\source\\repos\\CareerConnect\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -165,8 +164,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T12:27:37.889Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-23T12:27:37.889Z"
             },
             {
               "$type": "Document",
@@ -178,8 +176,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAUAAAAAAAAAAAAQwBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-24T09:05:56.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-24T09:05:56.49Z"
             },
             {
               "$type": "Document",
@@ -191,8 +188,7 @@
               "RelativeToolTip": "Models\\JobSeeker.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAIwCIAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T13:16:52.598Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-23T13:16:52.598Z"
             }
           ]
         }

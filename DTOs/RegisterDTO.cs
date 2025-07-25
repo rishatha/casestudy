@@ -4,16 +4,18 @@ namespace CareerConnect.DTOs
 {
     public class RegisterDTO
     {
-        [Required]
+        [Required(ErrorMessage = "Name is required.")]
         public string UserName { get; set; }
 
-        [Required, EmailAddress]
+        [Required(ErrorMessage = "Email is required.")]
+        [EmailAddress(ErrorMessage = "Invalid email address.")]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Password is required.")]
+        [MinLength(6, ErrorMessage = "Password must be at least 6 characters long.")]
         public string Password { get; set; }
 
-        [Required]
-        public string Role { get; set; } // jobseeker / employer
+        [Required(ErrorMessage = "Role is required.")]
+        public string Role { get; set; }
     }
 }

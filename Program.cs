@@ -33,6 +33,10 @@ namespace CareerConnect
 
             //auth
             builder.Services.AddScoped<IAuthService, AuthService>();
+            builder.Services.AddScoped<IEmployerService, EmployerService>();
+            builder.Services.AddScoped<IJobService, JobService>();
+            builder.Services.AddScoped<IJobSeekerService, JobSeekerService>();
+            builder.Services.AddScoped<IApplicationService, ApplicationService>();
 
 
 

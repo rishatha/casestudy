@@ -147,7 +147,7 @@
             "format": "email"
           },
           "password": {
-            "minLength": 1,
+            "minLength": 6,
             "type": "string"
           },
           "role": {

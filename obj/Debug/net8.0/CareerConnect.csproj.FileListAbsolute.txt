@@ -178,3 +178,4 @@ C:\Users\risha\source\repos\CareerConnect\obj\Debug\net8.0\ref\CareerConnect.dll
 C:\Users\risha\source\repos\CareerConnect\bin\Debug\net8.0\FluentValidation.dll
 C:\Users\risha\source\repos\CareerConnect\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
 C:\Users\risha\source\repos\CareerConnect\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\risha\source\repos\CareerConnect\obj\Debug\net8.0\CareerConnect.sourcelink.json

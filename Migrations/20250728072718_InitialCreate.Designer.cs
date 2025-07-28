@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CareerConnect.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250725144648_InitialCreate")]
+    [Migration("20250728072718_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -141,6 +141,11 @@ namespace CareerConnect.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("JobId"));
 
+                    b.Property<string>("CompanyName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasMaxLength(1000)
@@ -157,7 +162,7 @@ namespace CareerConnect.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<DateTime>("PostedAt")
+                    b.Property<DateTime>("PostedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Qualifications")

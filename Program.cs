@@ -3,7 +3,6 @@ using CareerConnect.Data;
 using CareerConnect.Interfaces;
 using CareerConnect.Models;
 using CareerConnect.Repositories;
-using CareerConnect.Services;
 using Microsoft.EntityFrameworkCore;
 //using FluentValidation;
 //using FluentValidation.AspNetCore;

@@ -1,17 +1,27 @@
 [
   {
     "ContainingType": "CareerConnect.Controllers.ApplicationController",
-    "Method": "GetAll",
+    "Method": "GetAllApplications",
     "RelativePath": "api/Application",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[CareerConnect.DTOs.ApplicationDTO, CareerConnect, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "CareerConnect.Controllers.ApplicationController",
-    "Method": "Create",
+    "Method": "CreateApplication",
     "RelativePath": "api/Application",
     "HttpMethod": "POST",
     "IsController": true,
@@ -23,11 +33,21 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "CareerConnect.DTOs.ApplicationDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "CareerConnect.Controllers.ApplicationController",
-    "Method": "GetById",
+    "Method": "GetApplicationById",
     "RelativePath": "api/Application/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -39,11 +59,21 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "CareerConnect.DTOs.ApplicationDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "CareerConnect.Controllers.ApplicationController",
-    "Method": "Delete",
+    "Method": "DeleteApplication",
     "RelativePath": "api/Application/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -59,7 +89,7 @@
   },
   {
     "ContainingType": "CareerConnect.Controllers.ApplicationController",
-    "Method": "UpdateStatus",
+    "Method": "UpdateApplicationStatus",
     "RelativePath": "api/Application/{id}/status",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -76,11 +106,21 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "CareerConnect.DTOs.ApplicationDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "CareerConnect.Controllers.ApplicationController",
-    "Method": "GetByJobSeeker",
+    "Method": "GetApplicationsByJobSeekerId",
     "RelativePath": "api/Application/jobseeker/{jobSeekerId}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -92,7 +132,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[CareerConnect.DTOs.ApplicationDTO, CareerConnect, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "CareerConnect.Controllers.AuditLogController",
@@ -106,9 +156,51 @@
   },
   {
     "ContainingType": "CareerConnect.Controllers.AuditLogController",
+    "Method": "AddLog",
+    "RelativePath": "api/AuditLog",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "action",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "description",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CareerConnect.Controllers.AuditLogController",
     "Method": "GetByUserId",
     "RelativePath": "api/AuditLog/user/{userId}",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CareerConnect.Controllers.AuthController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/Auth/{userId}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -153,7 +245,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "EmployerController",
+    "ContainingType": "CareerConnect.Controllers.EmployerController",
     "Method": "CreateEmployer",
     "RelativePath": "api/Employer",
     "HttpMethod": "POST",
@@ -166,41 +258,21 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "CareerConnect.DTOs.EmployerDTO",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "EmployerController",
+    "ContainingType": "CareerConnect.Controllers.EmployerController",
     "Method": "GetAllEmployers",
     "RelativePath": "api/Employer",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[CareerConnect.DTOs.EmployerDTO, CareerConnect, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "EmployerController",
-    "Method": "GetEmployerById",
+    "ContainingType": "CareerConnect.Controllers.EmployerController",
+    "Method": "GetEmployer",
     "RelativePath": "api/Employer/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -212,20 +284,10 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "CareerConnect.DTOs.EmployerDTO",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "EmployerController",
+    "ContainingType": "CareerConnect.Controllers.EmployerController",
     "Method": "UpdateEmployer",
     "RelativePath": "api/Employer/{id}",
     "HttpMethod": "PUT",
@@ -246,7 +308,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "EmployerController",
+    "ContainingType": "CareerConnect.Controllers.EmployerController",
     "Method": "DeleteEmployer",
     "RelativePath": "api/Employer/{id}",
     "HttpMethod": "DELETE",
@@ -414,6 +476,22 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CareerConnect.Controllers.NotificationController",
+    "Method": "SendNotification",
+    "RelativePath": "api/Notification",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "notificationDto",
+        "Type": "CareerConnect.DTOs.NotificationDTO",
         "IsRequired": true
       }
     ],

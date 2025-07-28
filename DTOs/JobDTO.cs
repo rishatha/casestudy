@@ -28,7 +28,12 @@ namespace CareerConnect.DTOs
         [Required(ErrorMessage = "Salary is required")]
         public decimal Salary { get; set; }
 
-        public DateTime PostedAt { get; set; } = DateTime.Now;
+        [Required(ErrorMessage = "Company name is required")]
+        [MaxLength(100)]
+        public string CompanyName { get; set; }
+
+        public DateTime PostedDate { get; set; } = DateTime.Now;
+
         public bool IsActive { get; set; } = true;
     }
 }

@@ -32,12 +32,14 @@ namespace CareerConnect.Repositories
         {
             var job = new Job
             {
+                EmployerId = jobDto.EmployerId,
                 Title = jobDto.Title,
                 Description = jobDto.Description,
+                Qualifications = jobDto.Qualifications,
                 Location = jobDto.Location,
                 Salary = jobDto.Salary,
                 CompanyName = jobDto.CompanyName,
-                PostedDate = DateTime.Now,
+                PostedDate = jobDto.PostedDate,
                 IsActive = true
             };
 
@@ -53,9 +55,11 @@ namespace CareerConnect.Repositories
 
             job.Title = jobDto.Title;
             job.Description = jobDto.Description;
+            job.Qualifications = jobDto.Qualifications;
             job.Location = jobDto.Location;
             job.Salary = jobDto.Salary;
             job.CompanyName = jobDto.CompanyName;
+            job.PostedDate = jobDto.PostedDate;
 
             await _context.SaveChangesAsync();
             return job;
@@ -66,7 +70,7 @@ namespace CareerConnect.Repositories
             var job = await _context.Jobs.FirstOrDefaultAsync(j => j.JobId == id && j.IsActive);
             if (job == null) return false;
 
-            job.IsActive = false; // Soft delete
+            job.IsActive = false;
             await _context.SaveChangesAsync();
             return true;
         }

@@ -19,6 +19,8 @@ namespace CareerConnect.Models
 
         public DateTime UploadedAt { get; set; } = DateTime.Now;
 
+        public bool IsDeleted { get; set; } = false;
+
         // Navigation
         public JobSeeker JobSeeker { get; set; }
     }

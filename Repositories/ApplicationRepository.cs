@@ -7,13 +7,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CareerConnect.Services
+namespace CareerConnect.Repositories
 {
-    public class ApplicationService : IApplicationService
+    public class ApplicationRepository : IApplicationRepository
     {
         private readonly AppDbContext _context;
 
-        public ApplicationService(AppDbContext context)
+        public ApplicationRepository(AppDbContext context)
         {
             _context = context;
         }
@@ -21,6 +21,7 @@ namespace CareerConnect.Services
         public async Task<IEnumerable<ApplicationDTO>> GetAllApplicationsAsync()
         {
             return await _context.Applications
+                .Where(a => a.IsActive)
                 .Select(a => new ApplicationDTO
                 {
                     ApplicationId = a.ApplicationId,
@@ -33,7 +34,10 @@ namespace CareerConnect.Services
 
         public async Task<ApplicationDTO> GetApplicationByIdAsync(int id)
         {
-            var application = await _context.Applications.FindAsync(id);
+            var application = await _context.Applications
+                .Where(a => a.ApplicationId == id && a.IsActive)
+                .FirstOrDefaultAsync();
+
             if (application == null) return null;
 
             return new ApplicationDTO
@@ -49,7 +53,7 @@ namespace CareerConnect.Services
         public async Task<IEnumerable<ApplicationDTO>> GetApplicationsByJobSeekerIdAsync(int jobSeekerId)
         {
             return await _context.Applications
-                .Where(a => a.JobSeekerId == jobSeekerId)
+                .Where(a => a.JobSeekerId == jobSeekerId && a.IsActive)
                 .Select(a => new ApplicationDTO
                 {
                     ApplicationId = a.ApplicationId,
@@ -67,7 +71,8 @@ namespace CareerConnect.Services
                 JobId = applicationDto.JobId,
                 JobSeekerId = applicationDto.JobSeekerId,
                 Status = applicationDto.Status,
-                AppliedAt = applicationDto.AppliedAt
+                AppliedAt = applicationDto.AppliedAt,
+                IsActive = true
             };
 
             _context.Applications.Add(application);
@@ -79,7 +84,10 @@ namespace CareerConnect.Services
 
         public async Task<ApplicationDTO> UpdateApplicationStatusAsync(int id, string status)
         {
-            var application = await _context.Applications.FindAsync(id);
+            var application = await _context.Applications
+                .Where(a => a.ApplicationId == id && a.IsActive)
+                .FirstOrDefaultAsync();
+
             if (application == null) return null;
 
             application.Status = status;
@@ -98,9 +106,9 @@ namespace CareerConnect.Services
         public async Task<bool> DeleteApplicationAsync(int id)
         {
             var application = await _context.Applications.FindAsync(id);
-            if (application == null) return false;
+            if (application == null || !application.IsActive) return false;
 
-            _context.Applications.Remove(application);
+            application.IsActive = false; // Soft delete
             await _context.SaveChangesAsync();
             return true;
         }

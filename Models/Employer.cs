@@ -29,6 +29,8 @@ namespace CareerConnect.Models
 
         public string Website { get; set; }
 
+        public bool IsActive { get; set; } = true;
+
         // Navigation
         public User User { get; set; }
         public ICollection<Job> Jobs { get; set; }

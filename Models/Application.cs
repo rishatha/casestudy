@@ -23,7 +23,9 @@ namespace CareerConnect.Models
 
         public DateTime AppliedAt { get; set; } = DateTime.Now;
 
-       // Navigation
+        public bool IsActive { get; set; } = true; // Added for soft delete
+
+        // Navigation
         public Job Job { get; set; }
         public JobSeeker JobSeeker { get; set; }
     }

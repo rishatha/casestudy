@@ -1,52 +1,58 @@
 ﻿using CareerConnect.DTOs;
+using CareerConnect.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
-[ApiController]
-[Route("api/[controller]")]
-public class EmployerController : ControllerBase
+namespace CareerConnect.Controllers
 {
-    private readonly IEmployerService _service;
-
-    public EmployerController(IEmployerService service)
+    [ApiController]
+    [Route("api/[controller]")]
+    public class EmployerController : ControllerBase
     {
-        _service = service;
-    }
+        private readonly IEmployerRepository _repository;
 
-    [HttpPost]
-    public async Task<ActionResult<EmployerDTO>> CreateEmployer([FromBody] EmployerDTO dto)
-    {
-        if (!ModelState.IsValid) return BadRequest(ModelState);
-        var result = await _service.CreateEmployerAsync(dto);
-        return CreatedAtAction(nameof(GetEmployerById), new { id = result.EmployerId }, result);
-    }
+        public EmployerController(IEmployerRepository repository)
+        {
+            _repository = repository;
+        }
 
-    [HttpGet("{id}")]
-    public async Task<ActionResult<EmployerDTO>> GetEmployerById(int id)
-    {
-        var emp = await _service.GetEmployerByIdAsync(id);
-        if (emp == null) return NotFound();
-        return Ok(emp);
-    }
+        [HttpPost]
+        public async Task<IActionResult> CreateEmployer([FromBody] EmployerDTO dto)
+        {
+            var result = await _repository.CreateEmployerAsync(dto);
+            return Ok(result);
+        }
 
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<EmployerDTO>>> GetAllEmployers()
-    {
-        return Ok(await _service.GetAllEmployersAsync());
-    }
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetEmployer(int id)
+        {
+            var result = await _repository.GetEmployerByIdAsync(id);
+            if (result == null) return NotFound();
+            return Ok(result);
+        }
 
-    [HttpPut("{id}")]
-    public async Task<ActionResult> UpdateEmployer(int id, [FromBody] EmployerDTO dto)
-    {
-        var result = await _service.UpdateEmployerAsync(id, dto);
-        if (result == null) return NotFound();
-        return Ok(result);
-    }
+        [HttpGet]
+        public async Task<IActionResult> GetAllEmployers()
+        {
+            var result = await _repository.GetAllEmployersAsync();
+            return Ok(result);
+        }
 
-    [HttpDelete("{id}")]
-    public async Task<ActionResult> DeleteEmployer(int id)
-    {
-        var success = await _service.DeleteEmployerAsync(id);
-        if (!success) return NotFound();
-        return NoContent();
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateEmployer(int id, [FromBody] EmployerDTO dto)
+        {
+            var result = await _repository.UpdateEmployerAsync(id, dto);
+            if (result == null) return NotFound();
+            return Ok(result);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteEmployer(int id)
+        {
+            var success = await _repository.DeleteEmployerAsync(id);
+            if (!success) return NotFound();
+            return NoContent();
+        }
     }
 }

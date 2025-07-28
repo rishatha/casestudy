@@ -2,9 +2,10 @@
 
 namespace CareerConnect.Interfaces
 {
-    public interface IAuthService
+    public interface IAuthRepository
     {
         string Register(RegisterDTO dto);
         string Login(LoginDTO dto);
+        string DeleteUser(int userId); 
     }
 }

@@ -7,7 +7,7 @@ namespace CareerConnect.DTOs
     {
         public int ResumeId { get; set; }
 
-        [Required(ErrorMessage = "JobSeekerId is required")]
+        [Required]
         public int JobSeekerId { get; set; }
 
         [Required(ErrorMessage = "Resume path is required")]

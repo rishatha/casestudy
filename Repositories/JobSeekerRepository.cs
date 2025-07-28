@@ -1,40 +1,43 @@
 ﻿using CareerConnect.Data;
 using CareerConnect.DTOs;
-using CareerConnect.Interfaces;
 using CareerConnect.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CareerConnect.Services
+namespace CareerConnect.Repositories
 {
-    public class JobSeekerService : IJobSeekerService
+    public class JobSeekerRepository : IJobSeekerRepository
     {
         private readonly AppDbContext _context;
 
-        public JobSeekerService(AppDbContext context)
+        public JobSeekerRepository(AppDbContext context)
         {
             _context = context;
         }
 
         public async Task<IEnumerable<JobSeekerDTO>> GetAllAsync()
         {
-            return await _context.JobSeekers.Select(js => new JobSeekerDTO
-            {
-                JobSeekerID = js.JobSeekerId,
-                UserId = js.UserId,
-                FirstName = js.FirstName,
-                LastName = js.LastName,
-                Phone = js.Phone,
-                Qualification = js.Qualification,
-                Skills = js.Skills
-            }).ToListAsync();
+            return await _context.JobSeekers
+                .Where(js => js.IsActive)
+                .Select(js => new JobSeekerDTO
+                {
+                    JobSeekerID = js.JobSeekerId,
+                    UserId = js.UserId,
+                    FirstName = js.FirstName,
+                    LastName = js.LastName,
+                    Phone = js.Phone,
+                    Qualification = js.Qualification,
+                    Skills = js.Skills
+                }).ToListAsync();
         }
 
         public async Task<JobSeekerDTO> GetByIdAsync(int id)
         {
-            var js = await _context.JobSeekers.FindAsync(id);
+            var js = await _context.JobSeekers
+                .FirstOrDefaultAsync(j => j.JobSeekerId == id && j.IsActive);
+
             if (js == null) return null;
 
             return new JobSeekerDTO
@@ -71,7 +74,7 @@ namespace CareerConnect.Services
         public async Task<JobSeekerDTO> UpdateAsync(int id, JobSeekerDTO dto)
         {
             var entity = await _context.JobSeekers.FindAsync(id);
-            if (entity == null) return null;
+            if (entity == null || !entity.IsActive) return null;
 
             entity.FirstName = dto.FirstName;
             entity.LastName = dto.LastName;
@@ -86,9 +89,9 @@ namespace CareerConnect.Services
         public async Task<bool> DeleteAsync(int id)
         {
             var entity = await _context.JobSeekers.FindAsync(id);
-            if (entity == null) return false;
+            if (entity == null || !entity.IsActive) return false;
 
-            _context.JobSeekers.Remove(entity);
+            entity.IsActive = false;
             await _context.SaveChangesAsync();
             return true;
         }

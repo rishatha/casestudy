@@ -8,11 +8,11 @@ namespace CareerConnect.Controllers
     [Route("api/[controller]")]
     public class AuthController : ControllerBase
     {
-        private readonly IAuthService _authService;
+        private readonly IAuthRepository _authRepository;
 
-        public AuthController(IAuthService authService)
+        public AuthController(IAuthRepository authRepository)
         {
-            _authService = authService;
+            _authRepository = authRepository;
         }
 
         [HttpPost("register")]
@@ -21,7 +21,7 @@ namespace CareerConnect.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var result = _authService.Register(dto);
+            var result = _authRepository.Register(dto);
             if (result == "Email already exists.")
                 return Conflict(result);
 
@@ -34,11 +34,21 @@ namespace CareerConnect.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var result = _authService.Login(dto);
+            var result = _authRepository.Login(dto);
             if (result == "Login successful.")
                 return Ok(result);
             else
                 return Unauthorized(result);
+        }
+
+        [HttpDelete("{userId}")]
+        public IActionResult DeleteUser(int userId)
+        {
+            var result = _authRepository.DeleteUser(userId);
+            if (result == "User not found.")
+                return NotFound(result);
+
+            return Ok(result);
         }
     }
 }

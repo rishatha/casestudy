@@ -7,7 +7,7 @@ namespace CareerConnect.Models
     public class JobSeeker
     {
         [Key]
-        public int JobSeekerID { get; set; }
+        public int JobSeekerId { get; set; }
 
         [Required]
         [ForeignKey("User")]
@@ -28,6 +28,8 @@ namespace CareerConnect.Models
 
         [Required(ErrorMessage = "Skills are required")]
         public string Skills { get; set; }
+
+        public bool IsActive { get; set; } = true; // Soft delete flag
 
         // Navigation
         public User User { get; set; }

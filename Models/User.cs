@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using System.Collections.Generic;
 
 namespace CareerConnect.Models
 {
@@ -24,6 +23,8 @@ namespace CareerConnect.Models
         public string Role { get; set; } // "jobseeker" or "employer"
 
         public DateTime CreatedAt { get; set; } = DateTime.Now;
+
+        public bool IsActive { get; set; } = true;  // Soft delete flag
 
         // Navigation
         public Employer Employer { get; set; }

@@ -1,7 +1,6 @@
 ﻿using CareerConnect.DTOs;
 using CareerConnect.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace CareerConnect.Controllers
 {
@@ -9,24 +8,24 @@ namespace CareerConnect.Controllers
     [Route("api/[controller]")]
     public class JobController : ControllerBase
     {
-        private readonly IJobService _jobService;
+        private readonly IJobRepository _jobRepository;
 
-        public JobController(IJobService jobService)
+        public JobController(IJobRepository jobRepository)
         {
-            _jobService = jobService;
+            _jobRepository = jobRepository;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAllJobs()
         {
-            var jobs = await _jobService.GetAllJobsAsync();
+            var jobs = await _jobRepository.GetAllJobsAsync();
             return Ok(jobs);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetJobById(int id)
         {
-            var job = await _jobService.GetJobByIdAsync(id);
+            var job = await _jobRepository.GetJobByIdAsync(id);
             if (job == null) return NotFound();
             return Ok(job);
         }
@@ -35,7 +34,7 @@ namespace CareerConnect.Controllers
         public async Task<IActionResult> CreateJob([FromBody] JobDTO jobDto)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            var newJob = await _jobService.CreateJobAsync(jobDto);
+            var newJob = await _jobRepository.CreateJobAsync(jobDto);
             return CreatedAtAction(nameof(GetJobById), new { id = newJob.JobId }, newJob);
         }
 
@@ -43,7 +42,7 @@ namespace CareerConnect.Controllers
         public async Task<IActionResult> UpdateJob(int id, [FromBody] JobDTO jobDto)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            var updatedJob = await _jobService.UpdateJobAsync(id, jobDto);
+            var updatedJob = await _jobRepository.UpdateJobAsync(id, jobDto);
             if (updatedJob == null) return NotFound();
             return Ok(updatedJob);
         }
@@ -51,7 +50,7 @@ namespace CareerConnect.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteJob(int id)
         {
-            var result = await _jobService.DeleteJobAsync(id);
+            var result = await _jobRepository.DeleteJobAsync(id);
             if (!result) return NotFound();
             return NoContent();
         }

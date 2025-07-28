@@ -21,7 +21,8 @@ namespace CareerConnect.Models
 
         public DateTime SentAt { get; set; } = DateTime.Now;
 
-        //  Navigation property
+        public bool IsDeleted { get; set; } = false;
+
         public User User { get; set; }
     }
 }

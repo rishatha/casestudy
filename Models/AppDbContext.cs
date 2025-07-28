@@ -57,9 +57,12 @@ namespace CareerConnect.Data
             .HasForeignKey(n => n.UserId)
             .OnDelete(DeleteBehavior.Cascade);
 
+            //softdeletion filter
+            modelBuilder.Entity<Resume>().HasQueryFilter(r => !r.IsDeleted);
 
             base.OnModelCreating(modelBuilder);
         }
+     
 
         public DbSet<User> Users { get; set; }
         public DbSet<Employer> Employers { get; set; }

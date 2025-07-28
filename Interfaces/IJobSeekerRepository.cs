@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace CareerConnect.Interfaces
+namespace CareerConnect.Repositories
 {
-    public interface IJobSeekerService
+    public interface IJobSeekerRepository
     {
         Task<IEnumerable<JobSeekerDTO>> GetAllAsync();
         Task<JobSeekerDTO> GetByIdAsync(int id);

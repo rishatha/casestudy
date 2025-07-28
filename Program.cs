@@ -2,10 +2,11 @@
 using CareerConnect.Data;
 using CareerConnect.Interfaces;
 using CareerConnect.Models;
+using CareerConnect.Repositories;
 using CareerConnect.Services;
-using FluentValidation;
-using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
+//using FluentValidation;
+//using FluentValidation.AspNetCore;
 
 namespace CareerConnect
 {
@@ -32,11 +33,20 @@ namespace CareerConnect
 
 
             //auth
-            builder.Services.AddScoped<IAuthService, AuthService>();
-            builder.Services.AddScoped<IEmployerService, EmployerService>();
-            builder.Services.AddScoped<IJobService, JobService>();
-            builder.Services.AddScoped<IJobSeekerService, JobSeekerService>();
-            builder.Services.AddScoped<IApplicationService, ApplicationService>();
+         
+            
+     
+
+            builder.Services.AddScoped<IAuthRepository, AuthRepository>();
+            builder.Services.AddScoped<IEmployerRepository, EmployerRepository>();
+            builder.Services.AddScoped<IJobSeekerRepository, JobSeekerRepository>();
+            builder.Services.AddScoped<IJobRepository, JobRepository>();
+            builder.Services.AddScoped<IApplicationRepository, ApplicationRepository>();
+            builder.Services.AddScoped<IResumeRepository, ResumeRepository>();
+            builder.Services.AddScoped<INotificationRepository, NotificationRepository>();
+            builder.Services.AddScoped<IAuditLogRepository, AuditLogRepository>();
+
+
 
 
 

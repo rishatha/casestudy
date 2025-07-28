@@ -1,64 +1,70 @@
 ﻿using CareerConnect.DTOs;
 using CareerConnect.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace CareerConnect.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class ApplicationController : ControllerBase
     {
-        private readonly IApplicationService _applicationService;
+        private readonly IApplicationRepository _applicationRepository;
 
-        public ApplicationController(IApplicationService applicationService)
+        public ApplicationController(IApplicationRepository applicationRepository)
         {
-            _applicationService = applicationService;
+            _applicationRepository = applicationRepository;
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<ActionResult<IEnumerable<ApplicationDTO>>> GetAllApplications()
         {
-            var apps = await _applicationService.GetAllApplicationsAsync();
-            return Ok(apps);
+            var applications = await _applicationRepository.GetAllApplicationsAsync();
+            return Ok(applications);
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<ActionResult<ApplicationDTO>> GetApplicationById(int id)
         {
-            var app = await _applicationService.GetApplicationByIdAsync(id);
-            if (app == null) return NotFound();
-            return Ok(app);
+            var application = await _applicationRepository.GetApplicationByIdAsync(id);
+            if (application == null)
+                return NotFound("Application not found");
+
+            return Ok(application);
         }
 
         [HttpGet("jobseeker/{jobSeekerId}")]
-        public async Task<IActionResult> GetByJobSeeker(int jobSeekerId)
+        public async Task<ActionResult<IEnumerable<ApplicationDTO>>> GetApplicationsByJobSeekerId(int jobSeekerId)
         {
-            var apps = await _applicationService.GetApplicationsByJobSeekerIdAsync(jobSeekerId);
-            return Ok(apps);
+            var applications = await _applicationRepository.GetApplicationsByJobSeekerIdAsync(jobSeekerId);
+            return Ok(applications);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] ApplicationDTO dto)
+        public async Task<ActionResult<ApplicationDTO>> CreateApplication(ApplicationDTO dto)
         {
-            if (!ModelState.IsValid) return BadRequest(ModelState);
-            var result = await _applicationService.CreateApplicationAsync(dto);
-            return CreatedAtAction(nameof(GetById), new { id = result.ApplicationId }, result);
+            var created = await _applicationRepository.CreateApplicationAsync(dto);
+            return CreatedAtAction(nameof(GetApplicationById), new { id = created.ApplicationId }, created);
         }
 
         [HttpPut("{id}/status")]
-        public async Task<IActionResult> UpdateStatus(int id, [FromBody] string status)
+        public async Task<ActionResult<ApplicationDTO>> UpdateApplicationStatus(int id, [FromBody] string status)
         {
-            var result = await _applicationService.UpdateApplicationStatusAsync(id, status);
-            if (result == null) return NotFound();
-            return Ok(result);
+            var updated = await _applicationRepository.UpdateApplicationStatusAsync(id, status);
+            if (updated == null)
+                return NotFound("Application not found or inactive");
+
+            return Ok(updated);
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> DeleteApplication(int id)
         {
-            var success = await _applicationService.DeleteApplicationAsync(id);
-            if (!success) return NotFound();
+            var result = await _applicationRepository.DeleteApplicationAsync(id);
+            if (!result)
+                return NotFound("Application not found or already inactive");
+
             return NoContent();
         }
     }

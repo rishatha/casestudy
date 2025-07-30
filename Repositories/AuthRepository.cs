@@ -25,6 +25,16 @@ namespace CareerConnect.Repositories
             }
         }
 
+        private string GenerateRefreshToken()
+        {
+            var randomNumber = new byte[32];
+            using (var rng = RandomNumberGenerator.Create())
+            {
+                rng.GetBytes(randomNumber);
+                return Convert.ToBase64String(randomNumber);
+            }
+        }
+
         public string Register(RegisterDTO dto)
         {
             if (_context.Users.Any(u => u.Email == dto.Email && u.IsActive))
@@ -46,20 +56,26 @@ namespace CareerConnect.Repositories
             return "Registration successful.";
         }
 
-        public string Login(LoginDTO dto)
+        public User Login(LoginDTO dto)
         {
             var user = _context.Users.FirstOrDefault(u => u.Email == dto.Email && u.IsActive);
-            if (user == null)
-                return "Invalid email or password.";
+            if (user == null || user.Password != HashPassword(dto.Password))
+                return null;
 
-            string hashedPassword = HashPassword(dto.Password);
-            if (user.Password != hashedPassword)
-                return "Invalid email or password.";
+            // Generate refresh token
+            user.RefreshToken = GenerateRefreshToken();
+            user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
 
-            return "Login successful.";
+            _context.SaveChanges();
+            return user;
         }
 
-        public string DeleteUser(int userId) // Soft delete logic
+        public User GetUserByRefreshToken(string refreshToken)
+        {
+            return _context.Users.FirstOrDefault(u => u.RefreshToken == refreshToken && u.RefreshTokenExpiryTime > DateTime.UtcNow);
+        }
+
+        public string DeleteUser(int userId)
         {
             var user = _context.Users.FirstOrDefault(u => u.UserId == userId);
             if (user == null)

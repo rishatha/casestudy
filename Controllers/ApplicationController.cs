@@ -1,5 +1,6 @@
 ﻿using CareerConnect.DTOs;
 using CareerConnect.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -18,6 +19,7 @@ namespace CareerConnect.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Employer")]
         public async Task<ActionResult<IEnumerable<ApplicationDTO>>> GetAllApplications()
         {
             var applications = await _applicationRepository.GetAllApplicationsAsync();
@@ -25,6 +27,7 @@ namespace CareerConnect.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize(Roles = "Employer,JobSeeker")]
         public async Task<ActionResult<ApplicationDTO>> GetApplicationById(int id)
         {
             var application = await _applicationRepository.GetApplicationByIdAsync(id);
@@ -35,6 +38,7 @@ namespace CareerConnect.Controllers
         }
 
         [HttpGet("jobseeker/{jobSeekerId}")]
+        [Authorize(Roles = "JobSeeker")]
         public async Task<ActionResult<IEnumerable<ApplicationDTO>>> GetApplicationsByJobSeekerId(int jobSeekerId)
         {
             var applications = await _applicationRepository.GetApplicationsByJobSeekerIdAsync(jobSeekerId);
@@ -42,6 +46,7 @@ namespace CareerConnect.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "JobSeeker")]
         public async Task<ActionResult<ApplicationDTO>> CreateApplication(ApplicationDTO dto)
         {
             var created = await _applicationRepository.CreateApplicationAsync(dto);
@@ -49,6 +54,7 @@ namespace CareerConnect.Controllers
         }
 
         [HttpPut("{id}/status")]
+        [Authorize(Roles = "Employer")]
         public async Task<ActionResult<ApplicationDTO>> UpdateApplicationStatus(int id, [FromBody] string status)
         {
             var updated = await _applicationRepository.UpdateApplicationStatusAsync(id, status);
@@ -59,6 +65,7 @@ namespace CareerConnect.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Employer")]
         public async Task<IActionResult> DeleteApplication(int id)
         {
             var result = await _applicationRepository.DeleteApplicationAsync(id);

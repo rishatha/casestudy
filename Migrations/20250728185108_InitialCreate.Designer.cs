@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CareerConnect.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250728072718_InitialCreate")]
+    [Migration("20250728185108_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -310,6 +310,12 @@ namespace CareerConnect.Migrations
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RefreshToken")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("RefreshTokenExpiryTime")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Role")
                         .IsRequired()

@@ -20,11 +20,16 @@ namespace CareerConnect.Models
         public string Password { get; set; }
 
         [Required(ErrorMessage = "Role is required")]
-        public string Role { get; set; } // "jobseeker" or "employer"
+        public string Role { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.Now;
 
-        public bool IsActive { get; set; } = true;  // Soft delete flag
+        public bool IsActive { get; set; } = true;
+
+        // Refresh token support
+        public string? RefreshToken { get; set; }
+        public DateTime? RefreshTokenExpiryTime { get; set; }
+
 
         // Navigation
         public Employer Employer { get; set; }

@@ -1,12 +1,14 @@
 ﻿using CareerConnect.DTOs;
 using CareerConnect.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace CareerConnect.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
+    [Authorize(Roles = "JobSeeker")] // Only JobSeeker role can access
     public class JobSeekersController : ControllerBase
     {
         private readonly IJobSeekerRepository _repository;

@@ -1,11 +1,10 @@
 ﻿using CareerConnect.DTOs;
+using CareerConnect.Models;
 
-namespace CareerConnect.Interfaces
+public interface IAuthRepository
 {
-    public interface IAuthRepository
-    {
-        string Register(RegisterDTO dto);
-        string Login(LoginDTO dto);
-        string DeleteUser(int userId); 
-    }
+    string Register(RegisterDTO dto);
+    User Login(LoginDTO dto);
+    User GetUserByRefreshToken(string refreshToken);
+    string DeleteUser(int userId);
 }

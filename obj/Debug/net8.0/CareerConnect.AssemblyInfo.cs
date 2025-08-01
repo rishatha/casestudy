@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CareerConnect")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb726b30a3473ea74f197791436b3a2d133d656c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+67da41cd932166e042670155c962bc61055078b0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CareerConnect")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CareerConnect")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

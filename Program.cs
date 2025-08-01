@@ -58,16 +58,27 @@ namespace CareerConnect
                 };
             });
 
-            //  CORS Configuration (Allow React frontend)
-            builder.Services.AddCors(options =>
+             //  CORS Configuration (Allow React frontend)
+             builder.Services.AddCors(options =>
+             {
+                 options.AddPolicy("AllowReactApp", policy =>
+                 {
+                     policy.WithOrigins("http://localhost:3000") // React dev server
+                           .AllowAnyHeader()
+                           .AllowAnyMethod();
+                 });
+             }); // og one
+
+
+           /* builder.Services.AddCors(options =>
             {
-                options.AddPolicy("AllowReactApp", policy =>
+                options.AddDefaultPolicy(policy =>
                 {
-                    policy.WithOrigins("http://localhost:3000") // React dev server
+                    policy.WithOrigins("http://localhost:3000")
                           .AllowAnyHeader()
                           .AllowAnyMethod();
                 });
-            });
+            });*/ //new
 
             //  Swagger with JWT Support
             builder.Services.AddEndpointsApiExplorer();

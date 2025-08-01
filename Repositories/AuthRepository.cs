@@ -44,11 +44,14 @@ namespace CareerConnect.Repositories
             if (_context.Users.Any(u => u.Email == dto.Email && u.IsActive))
                 throw new BadRequestException("Email already exists.");
 
+            //  Always hash the incoming password
+            var hashedPassword = HashPassword(dto.Password);
+
             var user = new User
             {
                 UserName = dto.UserName,
                 Email = dto.Email,
-                Password = HashPassword(dto.Password),
+                Password = hashedPassword,
                 Role = dto.Role,
                 CreatedAt = DateTime.Now,
                 IsActive = true
@@ -66,7 +69,12 @@ namespace CareerConnect.Repositories
                 throw new ValidationException("Email and password are required.");
 
             var user = _context.Users.FirstOrDefault(u => u.Email == dto.Email && u.IsActive);
-            if (user == null || user.Password != HashPassword(dto.Password))
+            if (user == null)
+                throw new BadRequestException("Invalid email or password.");
+
+            //  Always hash the incoming password before comparison
+            var hashedPassword = HashPassword(dto.Password);
+            if (user.Password != hashedPassword)
                 throw new BadRequestException("Invalid email or password.");
 
             // Generate refresh token

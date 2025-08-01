@@ -8,7 +8,11 @@ C:\Users\risha\source\repos\CareerConnect\bin\Debug\net8.0\CareerConnect.dll
 C:\Users\risha\source\repos\CareerConnect\bin\Debug\net8.0\CareerConnect.pdb
 C:\Users\risha\source\repos\CareerConnect\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\risha\source\repos\CareerConnect\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\risha\source\repos\CareerConnect\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\risha\source\repos\CareerConnect\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Users\risha\source\repos\CareerConnect\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\risha\source\repos\CareerConnect\bin\Debug\net8.0\Humanizer.dll
+C:\Users\risha\source\repos\CareerConnect\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\risha\source\repos\CareerConnect\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\risha\source\repos\CareerConnect\bin\Debug\net8.0\Microsoft.Build.Locator.dll
 C:\Users\risha\source\repos\CareerConnect\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
@@ -160,6 +164,7 @@ C:\Users\risha\source\repos\CareerConnect\obj\Debug\net8.0\CareerConnect.Assembl
 C:\Users\risha\source\repos\CareerConnect\obj\Debug\net8.0\CareerConnect.csproj.CoreCompileInputs.cache
 C:\Users\risha\source\repos\CareerConnect\obj\Debug\net8.0\CareerConnect.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\risha\source\repos\CareerConnect\obj\Debug\net8.0\CareerConnect.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\risha\source\repos\CareerConnect\obj\Debug\net8.0\CareerConnect.sourcelink.json
 C:\Users\risha\source\repos\CareerConnect\obj\Debug\net8.0\rjimswa.dswa.cache.json
 C:\Users\risha\source\repos\CareerConnect\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 C:\Users\risha\source\repos\CareerConnect\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
@@ -175,8 +180,3 @@ C:\Users\risha\source\repos\CareerConnect\obj\Debug\net8.0\refint\CareerConnect.
 C:\Users\risha\source\repos\CareerConnect\obj\Debug\net8.0\CareerConnect.pdb
 C:\Users\risha\source\repos\CareerConnect\obj\Debug\net8.0\CareerConnect.genruntimeconfig.cache
 C:\Users\risha\source\repos\CareerConnect\obj\Debug\net8.0\ref\CareerConnect.dll
-C:\Users\risha\source\repos\CareerConnect\bin\Debug\net8.0\FluentValidation.dll
-C:\Users\risha\source\repos\CareerConnect\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
-C:\Users\risha\source\repos\CareerConnect\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
-C:\Users\risha\source\repos\CareerConnect\obj\Debug\net8.0\CareerConnect.sourcelink.json
-C:\Users\risha\source\repos\CareerConnect\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

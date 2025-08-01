@@ -97,7 +97,7 @@ namespace CareerConnect.Controllers
             var newRefreshToken = Guid.NewGuid().ToString();
             user.RefreshToken = newRefreshToken;
             user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
-            _authRepository.Login(new LoginDTO { Email = user.Email, Password = user.Password }); // triggers save
+            _authRepository.Login(new LoginDTO { Email = user.Email, Password = user.Password });
 
             return Ok(new AuthResponseDTO
             {
@@ -109,13 +109,15 @@ namespace CareerConnect.Controllers
 
         private ClaimsPrincipal GetPrincipalFromExpiredToken(string token)
         {
+            var key = _configuration["JwtSettings:SecretKey"];
+
             var tokenValidationParameters = new TokenValidationParameters
             {
                 ValidateAudience = false,
                 ValidateIssuer = false,
                 ValidateIssuerSigningKey = true,
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtSettings:SecretKey"])),
-                ValidateLifetime = false // Ignore token expiration
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key)),
+                ValidateLifetime = false
             };
 
             var tokenHandler = new JwtSecurityTokenHandler();

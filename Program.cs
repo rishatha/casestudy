@@ -1,11 +1,13 @@
-using CareerConnect.Data;
-using CareerConnect.Interfaces;
-using CareerConnect.Models;
-using CareerConnect.Repositories;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using CareerConnect.Models;
+using CareerConnect.DTOs;
+using CareerConnect.Data;
+using CareerConnect.Repositories;
+using CareerConnect.Services;
+using CareerConnect.Interfaces;
 using System.Text;
 
 namespace CareerConnect
@@ -16,27 +18,22 @@ namespace CareerConnect
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
             builder.Services.AddControllers();
 
-            // DbContext with hardcoded SQL Server connection
+            //  Add EF Core
             builder.Services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            // Repositories
+            //  Register Repositories
             builder.Services.AddScoped<IAuthRepository, AuthRepository>();
             builder.Services.AddScoped<IEmployerRepository, EmployerRepository>();
             builder.Services.AddScoped<IJobSeekerRepository, JobSeekerRepository>();
             builder.Services.AddScoped<IJobRepository, JobRepository>();
             builder.Services.AddScoped<IApplicationRepository, ApplicationRepository>();
             builder.Services.AddScoped<IResumeRepository, ResumeRepository>();
-            builder.Services.AddScoped<INotificationRepository, NotificationRepository>();
-            builder.Services.AddScoped<IAuditLogRepository, AuditLogRepository>();
-
-            builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
             builder.Services.AddScoped<IEmailService, EmailService>();
 
-            // JWT Settings
+            //  JWT Authentication
             var jwtSettings = builder.Configuration.GetSection("JwtSettings");
             var secretKey = jwtSettings["SecretKey"];
 
@@ -51,26 +48,36 @@ namespace CareerConnect
                 options.SaveToken = true;
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
-                    ValidateIssuer = false,
-                    ValidateAudience = false,
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
+                    ValidIssuer = jwtSettings["Issuer"],
+                    ValidAudience = jwtSettings["Audience"],
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey))
                 };
             });
 
+            //  CORS Configuration (Allow React frontend)
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowReactApp", policy =>
+                {
+                    policy.WithOrigins("http://localhost:3000") // React dev server
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
+                });
+            });
 
-
-            // Swagger with JWT support
+            //  Swagger with JWT Support
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("v1", new OpenApiInfo { Title = "CareerConnect API", Version = "v1" });
 
-                // Add JWT support to Swagger
                 options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
-                    Description = "JWT Authorization header using the Bearer scheme (Example: 'Bearer <token>')",
+                    Description = "JWT Authorization header using the Bearer scheme. Example: 'Bearer {token}'",
                     Name = "Authorization",
                     In = ParameterLocation.Header,
                     Type = SecuritySchemeType.ApiKey,
@@ -95,20 +102,30 @@ namespace CareerConnect
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
+            //  Middleware Pipeline
+
+            // Global Exception Handler
+            app.UseMiddleware<CareerConnect.Middleware.ExceptionMiddleware>();
+
+            // Swagger
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
 
+            // HTTPS
             app.UseHttpsRedirection();
 
-            app.UseAuthentication(); // JWT Authentication Middleware
+            //  Enable CORS (before auth)
+            app.UseCors("AllowReactApp");
+
+            // Authentication & Authorization
+            app.UseAuthentication();
             app.UseAuthorization();
 
+            // Map Controllers
             app.MapControllers();
-
             app.Run();
         }
     }

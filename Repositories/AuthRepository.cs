@@ -1,5 +1,6 @@
 ﻿using CareerConnect.Data;
 using CareerConnect.DTOs;
+using CareerConnect.Exceptions;
 using CareerConnect.Interfaces;
 using CareerConnect.Models;
 using System.Security.Cryptography;
@@ -37,8 +38,11 @@ namespace CareerConnect.Repositories
 
         public string Register(RegisterDTO dto)
         {
+            if (string.IsNullOrWhiteSpace(dto.Email) || string.IsNullOrWhiteSpace(dto.Password))
+                throw new ValidationException("Email and password are required.");
+
             if (_context.Users.Any(u => u.Email == dto.Email && u.IsActive))
-                return "Email already exists.";
+                throw new BadRequestException("Email already exists.");
 
             var user = new User
             {
@@ -58,9 +62,12 @@ namespace CareerConnect.Repositories
 
         public User Login(LoginDTO dto)
         {
+            if (string.IsNullOrWhiteSpace(dto.Email) || string.IsNullOrWhiteSpace(dto.Password))
+                throw new ValidationException("Email and password are required.");
+
             var user = _context.Users.FirstOrDefault(u => u.Email == dto.Email && u.IsActive);
             if (user == null || user.Password != HashPassword(dto.Password))
-                return null;
+                throw new BadRequestException("Invalid email or password.");
 
             // Generate refresh token
             user.RefreshToken = GenerateRefreshToken();
@@ -72,14 +79,19 @@ namespace CareerConnect.Repositories
 
         public User GetUserByRefreshToken(string refreshToken)
         {
-            return _context.Users.FirstOrDefault(u => u.RefreshToken == refreshToken && u.RefreshTokenExpiryTime > DateTime.UtcNow);
+            var user = _context.Users.FirstOrDefault(u => u.RefreshToken == refreshToken && u.RefreshTokenExpiryTime > DateTime.UtcNow);
+
+            if (user == null)
+                throw new NotFoundException("User with given refresh token not found or expired.");
+
+            return user;
         }
 
         public string DeleteUser(int userId)
         {
             var user = _context.Users.FirstOrDefault(u => u.UserId == userId);
             if (user == null)
-                return "User not found.";
+                throw new NotFoundException("User not found.");
 
             user.IsActive = false;
             _context.SaveChanges();

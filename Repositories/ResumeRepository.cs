@@ -1,5 +1,6 @@
 ﻿using CareerConnect.Data;
 using CareerConnect.DTOs;
+using CareerConnect.Exceptions;
 using CareerConnect.Interfaces;
 using CareerConnect.Models;
 using Microsoft.EntityFrameworkCore;
@@ -36,7 +37,8 @@ namespace CareerConnect.Repositories
             var resume = await _context.Resumes
                 .FirstOrDefaultAsync(r => r.ResumeId == id && !r.IsDeleted);
 
-            if (resume == null) return null;
+            if (resume == null)
+                throw new NotFoundException($"Resume with ID {id} not found.");
 
             return new ResumeDTO
             {
@@ -62,6 +64,9 @@ namespace CareerConnect.Repositories
 
         public async Task<ResumeDTO> CreateResumeAsync(ResumeDTO dto)
         {
+            if (dto.JobSeekerId <= 0 || string.IsNullOrEmpty(dto.ResumePath))
+                throw new ValidationException("Invalid job seeker ID or resume path.");
+
             var resume = new Resume
             {
                 JobSeekerId = dto.JobSeekerId,
@@ -79,7 +84,12 @@ namespace CareerConnect.Repositories
         public async Task<bool> DeleteResumeAsync(int id)
         {
             var resume = await _context.Resumes.FindAsync(id);
-            if (resume == null || resume.IsDeleted) return false;
+
+            if (resume == null)
+                throw new NotFoundException($"Resume with ID {id} not found.");
+
+            if (resume.IsDeleted)
+                throw new BadRequestException("Resume already deleted.");
 
             resume.IsDeleted = true;
             await _context.SaveChangesAsync();

@@ -8,7 +8,7 @@ namespace CareerConnect.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize(Roles = "JobSeeker")] // Only JobSeeker role can access
+    [Authorize]
     public class JobSeekersController : ControllerBase
     {
         private readonly IJobSeekerRepository _repository;

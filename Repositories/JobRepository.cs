@@ -1,5 +1,6 @@
 ﻿using CareerConnect.Data;
 using CareerConnect.DTOs;
+using CareerConnect.Exceptions;
 using CareerConnect.Interfaces;
 using CareerConnect.Models;
 using Microsoft.EntityFrameworkCore;
@@ -17,19 +18,32 @@ namespace CareerConnect.Repositories
 
         public async Task<IEnumerable<Job>> GetAllJobsAsync()
         {
-            return await _context.Jobs
-                .Where(j => j.IsActive)
-                .ToListAsync();
+            var jobs = await _context.Jobs.Where(j => j.IsActive).ToListAsync();
+
+            if (jobs == null || jobs.Count == 0)
+                throw new NotFoundException("No active jobs found.");
+
+            return jobs;
         }
 
-        public async Task<Job?> GetJobByIdAsync(int id)
+        public async Task<Job> GetJobByIdAsync(int id)
         {
-            return await _context.Jobs
-                .FirstOrDefaultAsync(j => j.JobId == id && j.IsActive);
+            var job = await _context.Jobs.FirstOrDefaultAsync(j => j.JobId == id && j.IsActive);
+
+            if (job == null)
+                throw new NotFoundException($"Job with ID {id} not found.");
+
+            return job;
         }
 
         public async Task<Job> CreateJobAsync(JobDTO jobDto)
         {
+            if (jobDto == null)
+                throw new ValidationException("Job data must be provided.");
+
+            if (jobDto.Salary <= 0)
+                throw new ValidationException("Salary must be greater than zero.");
+
             var job = new Job
             {
                 EmployerId = jobDto.EmployerId,
@@ -45,13 +59,19 @@ namespace CareerConnect.Repositories
 
             _context.Jobs.Add(job);
             await _context.SaveChangesAsync();
+
             return job;
         }
 
-        public async Task<Job?> UpdateJobAsync(int id, JobDTO jobDto)
+        public async Task<Job> UpdateJobAsync(int id, JobDTO jobDto)
         {
+            if (jobDto == null)
+                throw new ValidationException("Job data must be provided.");
+
             var job = await _context.Jobs.FirstOrDefaultAsync(j => j.JobId == id && j.IsActive);
-            if (job == null) return null;
+
+            if (job == null)
+                throw new NotFoundException($"Job with ID {id} not found.");
 
             job.Title = jobDto.Title;
             job.Description = jobDto.Description;
@@ -62,16 +82,20 @@ namespace CareerConnect.Repositories
             job.PostedDate = jobDto.PostedDate;
 
             await _context.SaveChangesAsync();
+
             return job;
         }
 
         public async Task<bool> DeleteJobAsync(int id)
         {
             var job = await _context.Jobs.FirstOrDefaultAsync(j => j.JobId == id && j.IsActive);
-            if (job == null) return false;
+
+            if (job == null)
+                throw new NotFoundException($"Job with ID {id} not found.");
 
             job.IsActive = false;
             await _context.SaveChangesAsync();
+
             return true;
         }
     }

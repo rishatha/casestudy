@@ -8,7 +8,7 @@ namespace CareerConnect.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize(Roles = "Employer")] // Only Employer role can access
+    [Authorize] 
     public class EmployerController : ControllerBase
     {
         private readonly IEmployerRepository _repository;

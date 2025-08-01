@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 
 namespace CareerConnect.DTOs
 {
@@ -11,3 +11,4 @@ namespace CareerConnect.DTOs
         public DateTime Timestamp { get; set; }
     }
 }
+*/

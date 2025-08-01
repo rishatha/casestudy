@@ -1,5 +1,6 @@
 ﻿using CareerConnect.Data;
 using CareerConnect.DTOs;
+using CareerConnect.Exceptions;
 using CareerConnect.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -38,7 +39,8 @@ namespace CareerConnect.Repositories
             var js = await _context.JobSeekers
                 .FirstOrDefaultAsync(j => j.JobSeekerId == id && j.IsActive);
 
-            if (js == null) return null;
+            if (js == null)
+                throw new NotFoundException("Job seeker not found.");
 
             return new JobSeekerDTO
             {
@@ -54,6 +56,9 @@ namespace CareerConnect.Repositories
 
         public async Task<JobSeekerDTO> CreateAsync(JobSeekerDTO dto)
         {
+            if (dto == null)
+                throw new ValidationException("Job seeker data must not be null.");
+
             var entity = new JobSeeker
             {
                 UserId = dto.UserId,
@@ -74,7 +79,8 @@ namespace CareerConnect.Repositories
         public async Task<JobSeekerDTO> UpdateAsync(int id, JobSeekerDTO dto)
         {
             var entity = await _context.JobSeekers.FindAsync(id);
-            if (entity == null || !entity.IsActive) return null;
+            if (entity == null || !entity.IsActive)
+                throw new NotFoundException("Job seeker not found for update.");
 
             entity.FirstName = dto.FirstName;
             entity.LastName = dto.LastName;
@@ -89,7 +95,8 @@ namespace CareerConnect.Repositories
         public async Task<bool> DeleteAsync(int id)
         {
             var entity = await _context.JobSeekers.FindAsync(id);
-            if (entity == null || !entity.IsActive) return false;
+            if (entity == null || !entity.IsActive)
+                throw new NotFoundException("Job seeker not found for deletion.");
 
             entity.IsActive = false;
             await _context.SaveChangesAsync();

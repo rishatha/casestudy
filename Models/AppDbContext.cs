@@ -43,7 +43,7 @@ namespace CareerConnect.Data
                 .HasForeignKey<Resume>(r => r.JobSeekerId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // AuditLog  User (Many-to-One)
+            /* AuditLog  User (Many-to-One)
             modelBuilder.Entity<AuditLog>()
                 .HasOne(al => al.User)
                 .WithMany()
@@ -56,6 +56,7 @@ namespace CareerConnect.Data
             .WithMany()
             .HasForeignKey(n => n.UserId)
             .OnDelete(DeleteBehavior.Cascade);
+            */
 
             //softdeletion filter
             modelBuilder.Entity<Resume>().HasQueryFilter(r => !r.IsDeleted);
@@ -70,8 +71,8 @@ namespace CareerConnect.Data
         public DbSet<Job> Jobs { get; set; }
         public DbSet<Application> Applications { get; set; }
         public DbSet<Resume> Resumes { get; set; }
-        public DbSet<AuditLog> AuditLogs { get; set; }
-        public DbSet<Notification> Notifications { get; set; }
+        //public DbSet<AuditLog> AuditLogs { get; set; }
+        //public DbSet<Notification> Notifications { get; set; }
 
     }
 }

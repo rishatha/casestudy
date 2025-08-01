@@ -145,58 +145,6 @@
     ]
   },
   {
-    "ContainingType": "CareerConnect.Controllers.AuditLogController",
-    "Method": "GetAll",
-    "RelativePath": "api/AuditLog",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CareerConnect.Controllers.AuditLogController",
-    "Method": "AddLog",
-    "RelativePath": "api/AuditLog",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "action",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "description",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CareerConnect.Controllers.AuditLogController",
-    "Method": "GetByUserId",
-    "RelativePath": "api/AuditLog/user/{userId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "CareerConnect.Controllers.AuthController",
     "Method": "DeleteUser",
     "RelativePath": "api/Auth/{userId}",
@@ -491,54 +439,6 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CareerConnect.Controllers.NotificationController",
-    "Method": "SendNotification",
-    "RelativePath": "api/Notification",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "notificationDto",
-        "Type": "CareerConnect.DTOs.NotificationDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CareerConnect.Controllers.NotificationController",
-    "Method": "MarkAsRead",
-    "RelativePath": "api/Notification/{id}/read",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CareerConnect.Controllers.NotificationController",
-    "Method": "GetUserNotifications",
-    "RelativePath": "api/Notification/{userId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userId",
         "Type": "System.Int32",
         "IsRequired": true
       }

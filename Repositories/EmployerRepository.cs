@@ -1,10 +1,8 @@
 ﻿using CareerConnect.Data;
 using CareerConnect.DTOs;
+using CareerConnect.Exceptions;
 using CareerConnect.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace CareerConnect.Repositories
 {
@@ -19,6 +17,9 @@ namespace CareerConnect.Repositories
 
         public async Task<EmployerDTO> CreateEmployerAsync(EmployerDTO dto)
         {
+            if (string.IsNullOrEmpty(dto.FirstName) || string.IsNullOrEmpty(dto.CompanyName))
+                throw new ValidationException("First name and company name are required.");
+
             var employer = new Employer
             {
                 UserId = dto.UserId,
@@ -38,11 +39,9 @@ namespace CareerConnect.Repositories
 
         public async Task<EmployerDTO> GetEmployerByIdAsync(int id)
         {
-            var emp = await _context.Employers
-                .Where(e => e.EmployerId == id && e.IsActive)
-                .FirstOrDefaultAsync();
-
-            if (emp == null) return null;
+            var emp = await _context.Employers.FirstOrDefaultAsync(e => e.EmployerId == id && e.IsActive);
+            if (emp == null)
+                throw new NotFoundException($"Employer with ID {id} not found.");
 
             return new EmployerDTO
             {
@@ -76,7 +75,8 @@ namespace CareerConnect.Repositories
         public async Task<EmployerDTO> UpdateEmployerAsync(int id, EmployerDTO dto)
         {
             var emp = await _context.Employers.FindAsync(id);
-            if (emp == null || !emp.IsActive) return null;
+            if (emp == null || !emp.IsActive)
+                throw new NotFoundException($"Employer with ID {id} not found.");
 
             emp.FirstName = dto.FirstName;
             emp.LastName = dto.LastName;
@@ -91,7 +91,8 @@ namespace CareerConnect.Repositories
         public async Task<bool> DeleteEmployerAsync(int id)
         {
             var emp = await _context.Employers.FindAsync(id);
-            if (emp == null || !emp.IsActive) return false;
+            if (emp == null || !emp.IsActive)
+                throw new NotFoundException($"Employer with ID {id} not found.");
 
             emp.IsActive = false;
             await _context.SaveChangesAsync();

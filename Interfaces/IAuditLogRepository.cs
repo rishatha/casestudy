@@ -1,4 +1,4 @@
-﻿using CareerConnect.DTOs;
+﻿/*using CareerConnect.DTOs;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -11,3 +11,4 @@ namespace CareerConnect.Interfaces
         Task<List<AuditLogDTO>> GetLogsByUserIdAsync(int userId);
     }
 }
+*/

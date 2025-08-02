@@ -288,6 +288,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CareerConnect.Controllers.EmployerController",
+    "Method": "GetEmployerByUserId",
+    "RelativePath": "api/Employer/user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CareerConnect.Controllers.JobController",
     "Method": "GetAllJobs",
     "RelativePath": "api/Job",
@@ -439,6 +455,22 @@
     "Parameters": [
       {
         "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CareerConnect.Controllers.JobSeekersController",
+    "Method": "GetByUserId",
+    "RelativePath": "api/JobSeekers/user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
         "Type": "System.Int32",
         "IsRequired": true
       }

@@ -102,5 +102,26 @@ namespace CareerConnect.Repositories
             await _context.SaveChangesAsync();
             return true;
         }
+
+        public async Task<JobSeekerDTO> GetJobSeekerByUserIdAsync(int userId)
+        {
+            var js = await _context.JobSeekers
+                .FirstOrDefaultAsync(j => j.UserId == userId && j.IsActive);
+
+            if (js == null)
+                throw new NotFoundException("Job seeker not found for user.");
+
+            return new JobSeekerDTO
+            {
+                JobSeekerID = js.JobSeekerId,
+                UserId = js.UserId,
+                FirstName = js.FirstName,
+                LastName = js.LastName,
+                Phone = js.Phone,
+                Qualification = js.Qualification,
+                Skills = js.Skills
+            };
+        }
+
     }
 }

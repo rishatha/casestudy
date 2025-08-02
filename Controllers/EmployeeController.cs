@@ -40,6 +40,16 @@ namespace CareerConnect.Controllers
             return Ok(result);
         }
 
+        //frontend
+        [HttpGet("user/{userId}")]
+        public async Task<IActionResult> GetEmployerByUserId(int userId)
+        {
+            var result = await _repository.GetEmployerByUserIdAsync(userId);
+            return Ok(result);
+        }
+
+
+
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateEmployer(int id, [FromBody] EmployerDTO dto)
         {

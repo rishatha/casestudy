@@ -36,7 +36,8 @@ namespace CareerConnect.Controllers
             {
                 new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
                 new Claim(ClaimTypes.Name, user.UserName),
-                new Claim(ClaimTypes.Role, user.Role)
+                new Claim(ClaimTypes.Role, user.Role.ToLower())
+
             };
 
             var token = new JwtSecurityToken(

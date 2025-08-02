@@ -98,5 +98,27 @@ namespace CareerConnect.Repositories
             await _context.SaveChangesAsync();
             return true;
         }
+
+        public async Task<EmployerDTO> GetEmployerByUserIdAsync(int userId)
+        {
+            var emp = await _context.Employers
+                .FirstOrDefaultAsync(e => e.UserId == userId && e.IsActive);
+
+            if (emp == null)
+                throw new NotFoundException($"Employer with UserId {userId} not found.");
+
+            return new EmployerDTO
+            {
+                EmployerId = emp.EmployerId,
+                UserId = emp.UserId,
+                FirstName = emp.FirstName,
+                LastName = emp.LastName,
+                PhoneNumber = emp.PhoneNumber,
+                CompanyName = emp.CompanyName,
+                Website = emp.Website
+            };
+        }
+
+
     }
 }

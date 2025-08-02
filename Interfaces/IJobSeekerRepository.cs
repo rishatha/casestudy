@@ -11,5 +11,7 @@ namespace CareerConnect.Repositories
         Task<JobSeekerDTO> CreateAsync(JobSeekerDTO dto);
         Task<JobSeekerDTO> UpdateAsync(int id, JobSeekerDTO dto);
         Task<bool> DeleteAsync(int id);
+
+        Task<JobSeekerDTO> GetJobSeekerByUserIdAsync(int userId);
     }
 }

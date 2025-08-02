@@ -33,6 +33,14 @@ namespace CareerConnect.Controllers
             return Ok(jobSeeker);
         }
 
+        [HttpGet("user/{userId}")]
+        public async Task<IActionResult> GetByUserId(int userId)
+        {
+            var jobSeeker = await _repository.GetJobSeekerByUserIdAsync(userId);
+            return Ok(jobSeeker);
+        }
+
+
         [HttpPost]
         public async Task<IActionResult> Create(JobSeekerDTO dto)
         {

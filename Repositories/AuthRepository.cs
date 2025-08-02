@@ -63,27 +63,29 @@ namespace CareerConnect.Repositories
             return "Registration successful.";
         }
 
-        public User Login(LoginDTO dto)
-        {
-            if (string.IsNullOrWhiteSpace(dto.Email) || string.IsNullOrWhiteSpace(dto.Password))
-                throw new ValidationException("Email and password are required.");
+         public User Login(LoginDTO dto)
+         {
+             if (string.IsNullOrWhiteSpace(dto.Email) || string.IsNullOrWhiteSpace(dto.Password))
+                 throw new ValidationException("Email and password are required.");
 
-            var user = _context.Users.FirstOrDefault(u => u.Email == dto.Email && u.IsActive);
-            if (user == null)
-                throw new BadRequestException("Invalid email or password.");
+             var user = _context.Users.FirstOrDefault(u => u.Email == dto.Email && u.IsActive);
+             if (user == null)
+                 throw new BadRequestException("Invalid email or password.");
 
-            //  Always hash the incoming password before comparison
-            var hashedPassword = HashPassword(dto.Password);
-            if (user.Password != hashedPassword)
-                throw new BadRequestException("Invalid email or password.");
+             //  Always hash the incoming password before comparison
+             var hashedPassword = HashPassword(dto.Password);
+             if (user.Password != hashedPassword)
+                 throw new BadRequestException("Invalid email or password.");
 
-            // Generate refresh token
-            user.RefreshToken = GenerateRefreshToken();
-            user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
+             // Generate refresh token
+             user.RefreshToken = GenerateRefreshToken();
+             user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
 
-            _context.SaveChanges();
-            return user;
-        }
+             _context.SaveChanges();
+             return user;
+         }
+        
+    
 
         public User GetUserByRefreshToken(string refreshToken)
         {
@@ -92,7 +94,8 @@ namespace CareerConnect.Repositories
             if (user == null)
                 throw new NotFoundException("User with given refresh token not found or expired.");
 
-            return user;
+           return user;
+
         }
 
         public string DeleteUser(int userId)
